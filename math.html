@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Math Test Form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Math Test Form</title>
 </head>
 <body>
 
@@ -11,11 +11,11 @@
 
 <h1>Math Test</h1>
 
-<form>
+<form action="" method="GET">
 
   <!-- User name field -->
   <label for="username">Name:</label><br />
-  <input type="text" id="username" name="username" required /><br /><br />
+  <input type="text" id="username" name="username" value="" required /><br /><br />
 
   <!-- Multiple Choice Questions -->
   <fieldset>
@@ -69,6 +69,39 @@
 <p>Math symbols used: &amp;times; (×), &amp;divide; (÷), &amp;radic; (√)</p>
 
 <!-- End of Math Test Form -->
+
+<script>
+// When the page loads, fill the form inputs with query parameters if available
+window.onload = function() {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.has('username')) {
+    document.getElementById('username').value = params.get('username');
+  }
+
+  if (params.has('q1')) {
+    let q1Value = params.get('q1');
+    let q1Option = document.querySelector(`input[name="q1"][value="${q1Value}"]`);
+    if (q1Option) q1Option.checked = true;
+  }
+
+  if (params.has('q2')) {
+    let q2Value = params.get('q2');
+    let q2Option = document.querySelector(`input[name="q2"][value="${q2Value}"]`);
+    if (q2Option) q2Option.checked = true;
+  }
+
+  if (params.has('q3')) {
+    let q3Value = params.get('q3');
+    let q3Option = document.querySelector(`input[name="q3"][value="${q3Value}"]`);
+    if (q3Option) q3Option.checked = true;
+  }
+
+  if (params.has('wordProblem')) {
+    document.getElementById('wordProblem').value = params.get('wordProblem');
+  }
+};
+</script>
 
 </body>
 </html>
