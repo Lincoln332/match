@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Math Test Form</title>
+</head>
+<body>
+
+<!-- Start of Math Test Form -->
+
+<h1>Math Test</h1>
+
+<form>
+
+  <!-- User name field -->
+  <label for="username">Name:</label><br />
+  <input type="text" id="username" name="username" required /><br /><br />
+
+  <!-- Multiple Choice Questions -->
+  <fieldset>
+    <legend>1. What is 7 &times; 8?</legend>
+    <input type="radio" id="q1a" name="q1" value="54" />
+    <label for="q1a">54</label><br />
+    <input type="radio" id="q1b" name="q1" value="56" />
+    <label for="q1b">56</label><br />
+    <input type="radio" id="q1c" name="q1" value="64" />
+    <label for="q1c">64</label><br />
+  </fieldset>
+
+  <br />
+
+  <fieldset>
+    <legend>2. Solve: 12 &divide; 4 = ?</legend>
+    <input type="radio" id="q2a" name="q2" value="2" />
+    <label for="q2a">2</label><br />
+    <input type="radio" id="q2b" name="q2" value="3" />
+    <label for="q2b">3</label><br />
+    <input type="radio" id="q2c" name="q2" value="4" />
+    <label for="q2c">4</label><br />
+  </fieldset>
+
+  <br />
+
+  <fieldset>
+    <legend>3. What is the square root of 81?</legend>
+    <input type="radio" id="q3a" name="q3" value="7" />
+    <label for="q3a">7</label><br />
+    <input type="radio" id="q3b" name="q3" value="8" />
+    <label for="q3b">8</label><br />
+    <input type="radio" id="q3c" name="q3" value="9" />
+    <label for="q3c">9</label><br />
+  </fieldset>
+
+  <br />
+
+  <!-- Word problem -->
+  <label for="wordProblem">4. Word Problem: If you have 5 apples and you buy 3 more, how many apples do you have total?</label><br />
+  <textarea id="wordProblem" name="wordProblem" rows="4" cols="50" placeholder="Type your answer here..."></textarea>
+
+  <br /><br />
+
+  <!-- Submit Button -->
+  <button type="submit">Submit Test</button>
+
+</form>
+
+<!-- Math symbols example -->
+<p>Math symbols used: &amp;times; (×), &amp;divide; (÷), &amp;radic; (√)</p>
+
+<!-- End of Math Test Form -->
+
+</body>
+</html>
